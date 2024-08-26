@@ -1,0 +1,34 @@
+<script>
+
+  function useDebounce(callback=()=>{}, delay=500){
+    var debounceTimer = null;
+    return (function(){
+        clearInterval(debounceTimer);
+        debounceTimer =  setTimeout(callback, delay);
+    })();
+}
+
+
+useDebounce(()=>{
+   console.log('4000') 
+}, 4000);
+
+useDebounce(()=>{
+   console.log('2000') 
+}, 2000);
+
+useDebounce(()=>{
+   console.log('5000') 
+}, 5000);
+
+
+useDebounce(()=>{
+   console.log('1000') 
+}, 1000);
+
+useDebounce(()=>{
+   console.log('3000') 
+}, 3000);
+
+  
+</script>
